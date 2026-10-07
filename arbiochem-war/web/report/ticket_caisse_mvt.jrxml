@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TicketCaisse" pageWidth="226" pageHeight="500" columnWidth="206" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="753aaf44-7f1f-4090-a16e-4889862421d0">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="220"/>
+	<parameter name="NOM_CAISSE" class="java.lang.String"/>
+	<parameter name="ID_CAISSE" class="java.lang.String"/>
+	<parameter name="DATE" class="java.lang.String"/>
+	<parameter name="HEURE" class="java.lang.String"/>
+	<parameter name="NOM_TIERS" class="java.lang.String"/>
+	<parameter name="MONTANT" class="java.lang.Double"/>
+	<parameter name="DEVISE" class="java.lang.String"/>
+	<parameter name="ID_MOUVEMENT" class="java.lang.String"/>
+	<parameter name="MODE" class="java.lang.String"/>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="206" height="25" uuid="6427e150-fc6a-4dc6-b384-17ff13974036"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TICKET DE CAISSE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="37" width="206" height="1" uuid="c2adc3bb-edd2-404c-b3b1-c58825402126"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="186" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="80" height="18" uuid="ddd8a8c5-3c9f-4330-91e7-8892c19b09e4"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caisse :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="24" width="125" height="18" uuid="b7f3f7c6-5da0-459c-b85a-05b318c7efab"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_CAISSE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="44" width="80" height="18" uuid="a625d04b-0c16-4350-b9bb-97ba30617df4"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Caisse :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="44" width="126" height="18" uuid="2025b3d2-cf27-4426-b623-ec0c159f00ca"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ID_CAISSE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="66" width="80" height="18" uuid="3225b80c-e638-45e3-a6d1-a7b17b8dca3b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="66" width="126" height="18" uuid="2bae69b6-04dd-4842-b4fa-dafd99dfbba0"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="88" width="80" height="18" uuid="ea2702dc-4b52-4dca-b48a-08b8457d511e"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Heure :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="88" width="126" height="18" uuid="801ce161-08bd-4e06-9ebb-937aaf9049c5"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HEURE}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="111" width="206" height="1" uuid="ed5bdcd0-f713-4f03-ab62-f483b0c88e39"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="120" width="80" height="18" uuid="0538cabe-950f-4ba0-a881-8c094be1cd9e"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tiers :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="80" y="120" width="126" height="18" uuid="cdf00d9f-db63-4ab5-abc9-3d0885c6e392"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_TIERS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="139" width="80" height="22" uuid="dd78427c-9dc9-48e9-b1aa-502e2ca5c62c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant :]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="80" y="139" width="104" height="22" uuid="cd8f5f12-6ca1-45c3-8a00-a2713d87b6cf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONTANT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="139" width="21" height="22" uuid="b1b9014d-c06b-4afa-aa7f-89a7a7def9f4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVISE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="80" height="18" uuid="966b6604-20de-44fa-b715-f51659baf660"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mouvement :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="4" width="126" height="18" uuid="f0c0f365-0ab7-4a87-8e64-8a3b98e253b5"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ID_MOUVEMENT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="161" width="80" height="18" uuid="7fb42e9d-3e73-4f9b-a5a3-96c57d06419f"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode paiement :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="80" y="161" width="116" height="18" uuid="c6765582-38ec-4f08-b94b-f77f516b2ad7"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MODE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="206" height="1" uuid="7b27f8f4-0e44-4692-b54d-ebd7efffb7a9"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="206" height="20" uuid="8fda3140-e33f-4186-826f-56c4b102a00e"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Merci pour votre confiance]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="install-git-hooks" default="install-git-hooks" basedir=".">
+
+    <!-- ============================================================ -->
+    <!-- TARGET : Installation du Hook Git par projet                 -->
+    <!-- ============================================================ -->
+    <target name="install-git-hooks" description="Configure le hook Git pour ce projet">
+
+        <echo message="=============================================="/>
+        <echo message="   Installation du Hook Git (par projet)     "/>
+        <echo message="=============================================="/>
+
+        <!-- Vérification : on est bien dans un repo Git -->
+        <available file="${basedir}/.git" type="dir" property="git.exists"/>
+        <fail unless="git.exists" message="❌ ERREUR : Aucun repo Git trouvé dans ${basedir}"/>
+
+        <!-- Vérification : le pre-commit existe dans control/ -->
+        <available file="${basedir}/control/pre-commit" type="file" property="hook.exists"/>
+        <fail unless="hook.exists" message="❌ ERREUR : Le fichier pre-commit est introuvable dans control/"/>
+
+        <!-- Exécution de la commande git config -->
+        <exec executable="git" dir="${basedir}" failonerror="true">
+            <arg value="config"/>
+            <arg value="core.hooksPath"/>
+            <arg value="control"/>
+        </exec>
+
+        <echo message=""/>
+        <echo message="✅ Hook Git configuré avec succès !"/>
+        <echo message="   Dossier des hooks : control/"/>
+        <echo message=""/>
+        <echo message="   📌 Format SQL obligatoire :"/>
+        <echo message="   Le fichier doit commencer par AAAA-MM-JJ-HH_MM"/>
+        <echo message="   Exemples :"/>
+        <echo message="     2026-04-29-14_30.sql"/>
+        <echo message="     2026-04-29-14_30-MonScript.sql"/>
+        <echo message=""/>
+        <echo message="   🚫 Fichiers interdits au commit :"/>
+        <echo message="   - dateBuild.txt"/>
+        <echo message="   - apj.properties"/>
+        <echo message="=============================================="/>
+
+    </target>
+
+</project>

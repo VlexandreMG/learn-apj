@@ -1,0 +1,15 @@
+build-file/arbiochem_war/
+build-file/ear/
+
+build-file/lib/lib.zip 
+
+**/classes/
+build-file/ear/
+
+.idea/
+*.iml 
+
+__pycache__/
+.venv/
+
+.DS_Store

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="facture_client_subreport1" columnCount="2" printOrder="Horizontal" pageWidth="540" pageHeight="802" columnWidth="250" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="22dcdf7e-8a66-4ba8-8237-3688caf094bd">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="controle" class="java.util.List"/>
+	<field name="val" class="java.lang.String"/>
+	<field name="desce" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="17">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="249" height="17" uuid="988e09d2-d911-4aed-9f53-add7217659cd"/>
+				<textElement markup="html">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>" + $F{val} + " :</b> " + $F{desce}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

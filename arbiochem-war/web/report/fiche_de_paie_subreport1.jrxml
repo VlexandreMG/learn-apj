@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fiche_de_paie_subreport1" pageWidth="448" pageHeight="802" columnWidth="448" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90d693f5-0823-4339-82fa-ee13e48523e0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<field name="matricule" class="java.lang.String"/>
+	<field name="nom" class="java.lang.String"/>
+	<field name="fonction" class="java.lang.String"/>
+	<field name="qualification" class="java.lang.String"/>
+	<field name="indice" class="java.lang.String"/>
+	<field name="datePaiement" class="java.util.Date"/>
+	<field name="salaireBase" class="java.lang.Double"/>
+	<field name="categorie" class="java.lang.String"/>
+	<field name="situationMLib" class="java.lang.String"/>
+	<field name="departementLib" class="java.lang.String"/>
+	<field name="matricule_cnaps" class="java.lang.String"/>
+	<field name="nbenfant" class="java.lang.Integer"/>
+	<field name="modePaiementLib" class="java.lang.String"/>
+	<field name="conger" class="java.lang.Double"/>
+	<field name="mois" class="java.lang.String"/>
+	<field name="annee" class="java.lang.String"/>
+	<field name="mapEmp" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6dad7a5e-54a0-4448-8025-736193e02254" x="0" y="0" width="448" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SOCIETE CONFISIERE ET BISCUITIERE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e4964e-cd7c-4fd8-be65-e585bee0bbfc" x="0" y="20" width="448" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BP 535 SAROPODY TANJOMBATO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="498df186-26a0-4fc1-bfed-6406898d66dc" x="0" y="40" width="448" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BULLETIN DE PAIE]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="9e01fef7-7128-4421-a1cf-88485085f22a" x="3" y="0" width="109" height="40"/>
+				<imageExpression><![CDATA["logo_sisal_ancien.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="294919f3-45d5-4cc3-8f12-3b636d01a1d8" mode="Transparent" x="0" y="0" width="448" height="60"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="48f59ea8-95ff-4d71-8e61-afddd18aa38c" x="3" y="48" width="61" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Classification : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="18" width="60" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Sit. Famille :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="33" width="60" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Departement : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="221aef3f-4b0d-46f6-a0fc-41f53a8c63bc" x="299" y="93" width="150" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modePaiementLib}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8673320e-cad1-41d2-8d8c-7c05f3a3b85e" x="38" y="18" width="187" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="19283579-8b97-4400-884c-949a84787179" x="3" y="93" width="75" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Date du paiement : ]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="3e0f50ad-5b5b-4246-90f8-1b82e7c07c5b" x="75" y="108" width="150" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salaireBase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="908dbc6c-4b2b-46a8-9a45-f6d7ec60fa8e" x="3" y="18" width="35" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Nom : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9054b003-73a4-4b56-a77b-71d7d5bd8d20" x="273" y="78" width="176" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[0]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="108" width="50" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Conge : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e0a2a029-1065-4bef-af88-8db41af4d290" x="38" y="33" width="187" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonction}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1e1c8211-9237-4c77-81cf-47165df868b9" x="299" y="63" width="150" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nbenfant}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="5d0b09e7-14b2-437c-820a-250bf62e48a1" x="75" y="93" width="150" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datePaiement}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="78" width="50" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Absences : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="3" width="60" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Categorie : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="63" width="76" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Enfant a charge : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="3" y="3" width="75" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Matricule :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ea6fe5de-c14d-4c2a-bb54-148808652eb7" x="283" y="3" width="165" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{categorie}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6afd3308-11c7-4b8c-b6be-be03374e8ff4" x="64" y="48" width="161" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qualification}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a9d34dbb-86fa-4cb1-b502-5edc0a0c81cf" x="283" y="18" width="165" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{situationMLib}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="259dd00e-187d-4715-95b0-42e821b27b9d" x="48" y="78" width="177" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mois}+" "+$F{annee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="00e9b4f4-ea99-483c-8295-64b2f80cb623" x="283" y="48" width="165" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricule_cnaps}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="48" width="60" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[N Cnaps : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09656ceb-2098-4e99-90eb-1c41cb2857ad" x="3" y="108" width="75" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Salaire de base : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5aaae522-667a-4d13-974b-5a32f5851591" x="3" y="33" width="35" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Emploi : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="48ae9ef4-6977-4757-a925-f0f8851ae651" x="283" y="33" width="165" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departementLib}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5b8bfc15-a526-4bcb-be45-d330f71248d4" x="273" y="108" width="176" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{conger}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="626d6db6-744d-4c04-8d39-9943af409fb7" x="75" y="3" width="150" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricule}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6244d881-c7c0-4091-85f2-375e0b9586a9" x="48" y="63" width="177" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{indice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="513e4aa4-09e6-414b-9930-14239335608d" x="3" y="78" width="45" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Paie du : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8da99189-84a5-43f0-988c-6c8aac7d12d0" x="3" y="63" width="45" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Indice :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="431bd12d-dca2-4458-b871-130c459aca27" x="223" y="93" width="76" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Mode de paiement :]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="d8b68648-f1a9-4b8e-8a59-4ca2f1d3c983" mode="Transparent" x="0" y="0" width="448" height="123"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="211" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="7069977e-69d2-482e-ac96-4f81d3df7ef6" x="0" y="0" width="449" height="211"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{mapEmp})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "fiche_de_paie_subreport1_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

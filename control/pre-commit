@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# ============================================================
+# HOOK PRE-COMMIT (par projet)
+# 1. Vérifie que les fichiers .sql commencent par AAAA-MM-JJ-HH_MM
+# 2. Bloque les fichiers interdits
+# ============================================================
+
+# --- Fichiers interdits ---
+FICHIERS_INTERDITS=("dateBuild.txt" "apj.properties")
+
+# --- Pattern : doit juste commencer par AAAA-MM-JJ-HH_MM ---
+# Le reste du nom est libre
+PATTERN="^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}_[0-9]{2}.*\.sql$"
+
+ERREUR=0
+
+# ============================================================
+# CONTRÔLE 1 : Fichiers interdits
+# ============================================================
+STAGED_FILES=$(git diff --cached --name-only)
+
+for INTERDIT in "${FICHIERS_INTERDITS[@]}"; do
+  if echo "$STAGED_FILES" | grep -q "$INTERDIT"; then
+    echo "❌ ERREUR : Le fichier '$INTERDIT' est interdit et ne peut pas être commité."
+    ERREUR=1
+  fi
+done
+
+# ============================================================
+# CONTRÔLE 2 : Format des fichiers .sql
+# ============================================================
+SQL_FILES=$(echo "$STAGED_FILES" | grep "\.sql$")
+
+for FILE in $SQL_FILES; do
+  BASENAME=$(basename "$FILE")
+  if ! echo "$BASENAME" | grep -Eq "$PATTERN"; then
+    echo "❌ ERREUR : Nom de fichier SQL invalide -> '$BASENAME'"
+    echo "   Le fichier doit commencer par : AAAA-MM-JJ-HH_MM"
+    echo "   Exemples valides :"
+    echo "     2026-04-29-14_30.sql"
+    echo "     2026-04-29-14_30-MonScript.sql"
+    echo "     2026-04-29-14_30-CompteurCPL-Zotina.sql"
+    ERREUR=1
+  fi
+done
+
+# ============================================================
+# RÉSULTAT
+# ============================================================
+if [ $ERREUR -ne 0 ]; then
+  echo ""
+  echo "🚫 Commit bloqué. Corrigez les erreurs ci-dessus et recommencez."
+  exit 1
+fi
+
+exit 0

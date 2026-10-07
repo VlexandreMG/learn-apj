@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="statistique_vente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02c3f79b-31e5-4232-82c8-486bf6a5f4b7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="daty" class="java.util.Date"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="datydebut" class="java.lang.String"/>
+	<parameter name="datyfin" class="java.lang.String"/>
+	<parameter name="totalbrut" class="java.lang.Double"/>
+	<parameter name="remiseglobale" class="java.lang.Double"/>
+	<parameter name="totalca" class="java.lang.Double"/>
+	<parameter name="totalfmg" class="java.lang.Double"/>
+	<parameter name="montantventes" class="java.lang.Double"/>
+	<parameter name="notecredit" class="java.lang.Double"/>
+	<parameter name="remise" class="java.lang.Double"/>
+	<parameter name="reste" class="java.lang.Double"/>
+	<parameter name="totalfmg2" class="java.lang.Double"/>
+	<parameter name="province" class="java.lang.String"/>
+	<parameter name="client" class="java.lang.String"/>
+	<parameter name="adresseclient" class="java.lang.String"/>
+	<parameter name="capital" class="java.lang.String"/>
+	<parameter name="nom" class="java.lang.String"/>
+	<field name="libelle" class="java.lang.String"/>
+	<field name="qte" class="java.lang.Double"/>
+	<field name="montant" class="java.lang.Double"/>
+	<field name="famille" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<variable name="montantsoustotal" class="java.lang.Double" resetType="Group" resetGroup="idfamille_group" calculation="Sum">
+		<variableExpression><![CDATA[$F{montant}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="idfamille_group">
+		<groupExpression><![CDATA[$F{famille}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="269" height="20" uuid="6567dd02-f4d0-4e7f-93d5-3fc37a848d08"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true" isUnderline="true"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{famille}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="30">
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="394" y="0" width="161" height="20" uuid="5cb5d62d-0ae3-4c41-a873-e682284a0d24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true"/>
+						<paragraph rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{montantsoustotal}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="247" y="0" width="147" height="20" uuid="ae302b11-ee83-4550-b5d6-b41771ad3b7f"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true" isUnderline="false"/>
+						<paragraph rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{famille}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="30" width="246" height="15" uuid="67e514cf-c1a9-47a0-9c9d-34218b1fd3a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseclient}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="15" width="246" height="15" uuid="026fd3b0-501f-4fd6-98e6-edef1fb6ca48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{capital}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="0" width="246" height="15" uuid="fbc876fc-37e3-4de3-979b-3e3fb98beb17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="35" width="308" height="20" uuid="9480c94b-2297-4c56-892c-b1762a8b41c4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Période "+$P{datydebut}+" au "+$P{datyfin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="15" width="272" height="20" uuid="cc20bf88-ea14-4627-aa0a-f62969ad4f51"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATISTIQUE DE VENTE DU CLIENT]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="278" y="15" width="277" height="20" uuid="e62c87e4-163f-4c95-bac4-8ab063772a59"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{client}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="314" y="0" width="80" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="161" height="20" uuid="ab573ce4-a3d1-464d-919a-9267d5ad8e79"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Montant HT (Ariary )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="0" width="223" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Désignation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="91" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="20" width="121" height="20" uuid="d4678c8b-0213-41f7-a73e-99721ca04a3c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{province}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="91" y="0" width="223" height="20" uuid="a0acda08-f535-43e9-9025-5f4d365b9539"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" isStrikeThrough="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{libelle}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="314" y="0" width="80" height="20" uuid="7ecf58df-2637-4b45-9259-2ec112dab9f1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif" isStrikeThrough="false"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qte}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="394" y="0" width="161" height="20" uuid="11a32d59-0726-4669-b32e-512bbfbfe0c9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif" isStrikeThrough="false"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="91" height="20" uuid="a8820beb-d933-4228-ba88-17cd487d676d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" isStrikeThrough="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="227">
+			<staticText>
+				<reportElement x="126" y="30" width="143" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total brut]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="30" width="143" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remise]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="30" width="143" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant vente]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="126" y="50" width="143" height="20" uuid="1a5308df-2b15-4005-aa78-a9702c0849ea"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalbrut}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="269" y="50" width="143" height="20" uuid="00f92e80-b161-4e9d-80fe-78040d6daaf0"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{remiseglobale}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="412" y="50" width="143" height="20" uuid="f0534435-d883-461a-a49e-864404074633"/>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{montantventes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="0" width="143" height="20" uuid="7d0b1ea0-4f88-42e0-8f90-256dbd4979a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sous-total du province :]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="394" y="0" width="161" height="20" uuid="b7274a95-c2e5-469f-8919-362e358ddae3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalfmg}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="286" y="0" width="108" height="20" uuid="b9bbbc4b-aa0c-4557-93ad-357de5f241d2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{province}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

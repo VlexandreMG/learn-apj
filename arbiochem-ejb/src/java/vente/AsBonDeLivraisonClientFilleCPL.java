@@ -1,0 +1,51 @@
+package vente;
+
+import java.sql.Date;
+
+public class AsBonDeLivraisonClientFilleCPL extends As_BondeLivraisonClientFille {
+    String idproduitlib , idvente ,idbc , unitelib;
+    Date daty;
+
+    public AsBonDeLivraisonClientFilleCPL () throws Exception{
+        this.setNomTable("AsBonDeLivraisonClientFilleCPL");
+    }
+    public String getIdproduitlib() {
+        return idproduitlib;
+    }
+
+    public void setIdproduitlib(String idproduitlib) {
+        this.idproduitlib = idproduitlib;
+    }
+
+    public String getIdvente() {
+        return idvente;
+    }
+
+    public void setIdvente(String idvente) {
+        this.idvente = idvente;
+    }
+
+    public String getIdbc() {
+        return idbc;
+    }
+
+    public void setIdbc(String idbc) {
+        this.idbc = idbc;
+    }
+
+    public Date getDaty() {
+        return daty;
+    }
+
+    public void setDaty(Date daty) {
+        this.daty = daty;
+    }
+
+    public String getUnitelib() {
+        return unitelib;
+    }
+
+    public void setUnitelib(String unitelib) {
+        this.unitelib = unitelib;
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="revert-git-hooks" default="revert-git-hooks" basedir=".">
+
+    <!-- ============================================================ -->
+    <!-- TARGET : Suppression du Hook Git par projet                  -->
+    <!-- ============================================================ -->
+    <target name="revert-git-hooks" description="Annule la configuration du hook Git pour ce projet">
+
+        <echo message="=============================================="/>
+        <echo message="   Suppression du Hook Git (par projet)      "/>
+        <echo message="=============================================="/>
+
+        <!-- Vérification : on est bien dans un repo Git -->
+        <available file="${basedir}/.git" type="dir" property="git.exists"/>
+        <fail unless="git.exists" message="❌ ERREUR : Aucun repo Git trouvé dans ${basedir}"/>
+
+        <!-- Suppression de la config core.hooksPath -->
+        <exec executable="git" dir="${basedir}" failonerror="false">
+            <arg value="config"/>
+            <arg value="--unset"/>
+            <arg value="core.hooksPath"/>
+        </exec>
+
+        <echo message=""/>
+        <echo message="✅ Hook Git désactivé avec succès !"/>
+        <echo message="   La configuration core.hooksPath a été supprimée."/>
+        <echo message="   Git utilise à nouveau le dossier par défaut : .git/hooks/"/>
+        <echo message=""/>
+        <echo message="   ℹ️  Le fichier control/pre-commit est toujours présent"/>
+        <echo message="      mais ne sera plus exécuté."/>
+        <echo message="=============================================="/>
+
+    </target>
+
+</project>

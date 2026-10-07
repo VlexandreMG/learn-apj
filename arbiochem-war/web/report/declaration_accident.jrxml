@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="declaration_accident" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8adb1c2b-14da-45bf-a3e8-62c2ec2829e8">
+	<property name="ireport.zoom" value="2.593742460100023"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="65"/>
+	<parameter name="nomPersonnel" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.util.Date"/>
+	<parameter name="cin" class="java.lang.String"/>
+	<parameter name="dateEmbauche" class="java.util.Date"/>
+	<parameter name="numCnaps" class="java.lang.String"/>
+	<parameter name="fonction" class="java.lang.String"/>
+	<parameter name="adresse" class="java.lang.String"/>
+	<parameter name="lieu" class="java.lang.String"/>
+	<parameter name="activite" class="java.lang.String"/>
+	<parameter name="materiel" class="java.lang.String"/>
+	<parameter name="lesion" class="java.lang.String"/>
+	<parameter name="centre" class="java.lang.String"/>
+	<parameter name="temoin1" class="java.lang.String"/>
+	<parameter name="temoin2" class="java.lang.String"/>
+	<parameter name="raisonSociale" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="telephone" class="java.lang.String"/>
+	<parameter name="adresseEmployeur" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="197" height="20" uuid="99224e15-9dff-417a-81ad-c7defec694c8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caisse Nationale de Prévoyance Sociale                                                                       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="63" height="20" uuid="f50ccc3a-2c9e-4126-8f41-43b75a1c0959"/>
+				<text><![CDATA[N°     Sinistre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="0" width="19" height="20" uuid="e96e142b-6a5c-4170-88f5-4d123b105d5a"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="0" width="19" height="20" uuid="ae106b19-3309-45c2-bf94-5523a912d570"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="0" width="19" height="20" uuid="cbe8360b-b865-44fb-abcf-9d45925281bb"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="19" height="20" uuid="ba316977-6683-4c95-a4a9-31ae95cd7887"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="0" width="19" height="20" uuid="5d889a4f-37a8-4826-9635-71c1b77f9a5f"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="0" width="19" height="20" uuid="572a80fc-dad0-4be3-b0f0-714547588fde"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="0" width="19" height="20" uuid="7cc3777e-1cca-49ce-8503-51ea4fe75646"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="0" width="19" height="20" uuid="29ee27c6-ec94-402f-8f28-09a35a28c16c"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="27" width="269" height="20" uuid="0253f56a-15c0-4f89-baf2-8376b2f07c40"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FILAZANA LOZA MANJO NY MPIASA                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="47" width="175" height="20" uuid="6ddeeee4-ca23-4780-9717-d8a61634f5a8"/>
+				<text><![CDATA[(Déclaration d’Accident d’un travailleur)]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="27" width="87" height="63" uuid="cb9c2ba0-e3da-4e13-8cc8-9f1b1e49a044"/>
+				<imageExpression><![CDATA["cnaps.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="97" y="70" width="401" height="20" uuid="462dd8d1-ae98-47f7-89ce-5279e86f63fc"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[« TSY MAINTSY MANAO FILAZANA AO ANATIN’NY 48 ORA ANY AMIN’NY CNaPS NY MPAMPIASA MOMBA NY LOZA MANJO NY MPIASANY »]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="90" width="401" height="20" uuid="218ad2d2-4f68-4b02-99bd-652657adcbb3"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[«L’EMPLOYEUR EST TENU D’AVISER LA CNaPS DANS UN DELAI DE 48 HEURES DE TOUT ACCIDENT SURVENU A L’UN DE SES TRAVAILLEURS »]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="110" width="401" height="20" uuid="de79b5c6-5159-4e84-b836-d27dc3d05ebb"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Selon l’article 176, alinéa 1 du Code de Prévoyance Sociale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="27" width="98" height="20" uuid="fe21ce47-14d1-477b-9d99-097ca8a9055c"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(Cases réservées à la CNaPS)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="139" width="555" height="14" backcolor="#CCCCCC" uuid="4d4c01d2-9148-4e76-9f13-2c9e30a8be79"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MPAMPIASA – EMPLOYEUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="153" width="50" height="13" uuid="695726b7-ac75-406f-9813-bbe97d82f3fc"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Raison Sociale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="167" width="28" height="13" uuid="031aa269-4967-473b-8814-95cf0d456777"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Adresse]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="28" height="13" uuid="259edf12-9fcb-4b58-a0fc-6abd1373f0e0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[N° Stat.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="153" width="319" height="13" uuid="5fe03187-6df2-4b3d-9d02-96b8afd1cee9"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="153" width="72" height="13" uuid="dc740742-cfb0-40e8-983b-2e7b40b9abd8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Matricule à la CNaPS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="152" width="19" height="14" uuid="cc43db7c-916c-4b1f-9da0-cb9bcaf37922"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="152" width="19" height="14" uuid="c2ae5aa4-2183-4e75-833b-6e7a2178a21b"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="152" width="19" height="14" uuid="40d01a73-8cbe-40e9-939b-a0cc60b9cecc"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="152" width="19" height="14" uuid="2820f76d-5da2-4321-9122-836370c09b78"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="152" width="19" height="14" uuid="52427127-487b-407d-9ee9-03c4752124b9"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="152" width="19" height="14" uuid="3ba0036e-93e2-4baa-8b84-674ce4d2dffb"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="166" width="300" height="13" uuid="acd38839-6a42-416e-bbfb-c76fb024affc"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="167" width="25" height="13" uuid="4d159152-d8ba-441f-9941-e8b57a93f514"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Tél. N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="166" width="69" height="13" uuid="3004eb0e-75c4-4c95-83f7-be4945bbb447"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="166" width="25" height="13" uuid="4a5d0141-4140-4b29-933d-94783624a422"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="166" width="108" height="13" uuid="8a7ce764-aeea-4f5c-9920-d0dcb48a292c"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="181" width="169" height="13" uuid="436337c8-8528-4acc-9d8f-ca9f98fe8a7f"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="181" width="21" height="13" uuid="0befcc66-39ef-415d-81cb-c6d7b14664a0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[N° RC ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="181" width="151" height="13" uuid="ecee9acc-3fc3-4e28-8e83-51cf808a9e18"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="181" width="15" height="13" uuid="236f8b7e-34f5-4961-94d8-895d7232817d"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[NIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="181" width="171" height="13" uuid="44659ddc-92fc-4301-b6bc-b92fe7dd489a"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="196" width="555" height="14" backcolor="#CCCCCC" uuid="e0fad201-78a1-4dc6-82f8-09b9f428acd1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIHARAM-BOINA – VICTIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="212" width="97" height="13" uuid="ce74e926-f4fc-4e5d-8e69-d94e3ab5c5db"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ANARANA SY FANAMPINY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="225" width="97" height="13" uuid="5e7619d4-8906-4fd1-886c-c5b6475c8bc1"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Nom et Prénoms ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="225" width="319" height="13" uuid="7e6dc394-e6c1-4626-b26a-feb93f35260e"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="238" width="97" height="13" uuid="14b7be3a-9166-40eb-b015-b39a9b18ea4c"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[TERAKA TAMIN'NY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="251" width="97" height="13" uuid="60531b59-fa17-4e7c-9695-bba3917574b8"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Né(e)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="251" width="121" height="13" uuid="a214298c-fa89-43db-af5a-0a68c6c9ad94"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="212" width="62" height="13" uuid="52617dc9-0d7d-4ccf-99cf-560dbba7a038"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Lahy *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="225" width="62" height="13" uuid="158db8f4-2d33-4374-9b18-0d1a4adb2836"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vavy *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="212" width="57" height="13" uuid="c302143f-691b-4a19-a864-9a94561a94e8"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(masculin)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="229" width="57" height="13" uuid="6ecf0e83-2dfd-4667-9092-70792ca0f821"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(féminin)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="244" width="19" height="20" uuid="f6d6c0a9-baf5-4dd3-83f0-89ea35826ade"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="244" width="19" height="20" uuid="166e2970-81d4-4b23-a486-bc03fae5f8a2"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="244" width="19" height="20" uuid="e7e0537f-a3e6-4f29-bbbf-157d0c870702"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="244" width="19" height="20" uuid="796cf3cb-bcf8-4101-a918-885b31b9c0a3"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="244" width="19" height="20" uuid="591af2c2-0f9d-4c97-96c0-b0445b4170b4"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="244" width="19" height="20" uuid="facc6b68-1e6a-41fe-9787-a47eccdca0aa"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="244" width="19" height="20" uuid="190974c5-c3a1-402e-8ce5-fb3a3e89806e"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="244" width="19" height="20" uuid="ffd79c9b-2862-4749-897a-e7c91e8bd989"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="244" width="19" height="20" uuid="2abcdd7a-b0fa-41ba-b8f5-fe7b6f4a423c"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="244" width="19" height="20" uuid="922758c4-a834-4a4c-8642-a3eac297e632"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="244" width="19" height="20" uuid="16c83386-6bc2-4468-8f65-c8823995895a"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="244" width="19" height="20" uuid="86986ddf-52aa-47dd-8883-489f4af1d69e"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="238" width="110" height="13" uuid="11d720a1-f183-43e3-b726-c95edb931b52"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[KARA-PANONDRO LAHARANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="251" width="109" height="13" uuid="f6ff575e-fe92-42a7-912a-594652309a3e"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[N° CIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="264" width="97" height="13" uuid="4a53a003-14b5-47e6-a320-d7de13bea2ad"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[DATY NIDIRANA NIASA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="270" width="19" height="20" uuid="a311f19c-b3dd-4f8e-9f08-df612bf1410d"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="270" width="19" height="20" uuid="eb194955-11b2-41ae-8170-f0b91c0009a2"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="264" width="110" height="13" uuid="66653c1a-47fc-4c55-8a14-bf364f36af45"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[LAHARANA AMIN’NY CNaPS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="270" width="19" height="20" uuid="167a0b76-526b-4497-9fce-ff2abc9040dc"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="270" width="19" height="20" uuid="3854a245-b642-4f01-8574-7a4e37888a1e"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="270" width="19" height="20" uuid="bf1cdaa8-044a-4433-9611-3604aa2f91ed"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="270" width="19" height="20" uuid="56fcc777-7a5b-4ca7-a1f2-d8bd82832883"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="277" width="109" height="13" uuid="0255a8ba-bd5e-4645-ba96-cae143d92283"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Matricule à la CNaPS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="270" width="19" height="20" uuid="05f4fed5-d5b4-438e-8942-c7ed1f0395e6"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="270" width="19" height="20" uuid="419417a6-b1eb-4309-9c06-3ad5f0af6eff"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="270" width="19" height="20" uuid="2d5ed89a-eef9-4e99-9d13-eba5206de5be"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="277" width="121" height="13" uuid="c25fc1fb-f225-428f-8a13-dce739060f1f"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="270" width="19" height="20" uuid="a7459fcf-0786-4ed1-96dd-321159e0e41a"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="277" width="97" height="13" uuid="815cf901-43de-403f-a624-b1545e8df81a"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Date d’embauche]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="270" width="19" height="20" uuid="daadb620-1668-46e5-b4e1-9cfd5154ba21"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="270" width="19" height="20" uuid="1c5d69cd-2b4c-40b1-9ab7-7837195e972b"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="320" width="555" height="14" backcolor="#CCCCCC" uuid="b0213efa-93ee-4138-a444-356904a6e7ed"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FITRANGAN’NY LOZA – CIRCONSTANCES DE L’ACCIDENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="303" width="134" height="13" uuid="28a178cf-802b-4a0e-8ced-dcd92ec418d6"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="303" width="97" height="13" uuid="ab87df9c-80f9-4ee9-a5bd-373082042f7b"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Fonction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="97" height="13" uuid="89e61215-ac2f-4fd2-a3e7-42ef8f5352b9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ASA ATAO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="303" width="97" height="13" uuid="1cdd0164-f97d-4faa-ad0b-bc60a4bde936"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Adresse exacte du domicile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="290" width="122" height="13" uuid="58f510db-0130-4436-abd2-664e942f990f"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ADIRESIN’NY TRANO FONENANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="303" width="227" height="13" uuid="3359f393-c4b1-49c3-aeac-5a2931a54970"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="338" width="147" height="13" uuid="8e18cb8a-65cc-40cd-9084-595521dccc9f"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ANDRO/DATY/ORA NITRANGAN’NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="351" width="97" height="13" uuid="82f7b329-9ff0-4fdd-b3ed-783c0a33f16b"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Jour/Date/Heure de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="351" width="134" height="13" uuid="72501e1c-e089-44d3-8749-79dde6353499"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="351" width="134" height="13" uuid="80117f76-987c-4ef8-b828-d73e5dc8b3f8"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="351" width="78" height="13" uuid="dd50a344-f22e-4fc2-882b-fa5b8ce9e38d"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="351" width="19" height="13" uuid="9be72438-376c-4fa5-adbb-2ad097262051"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[heure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="351" width="70" height="13" uuid="b4087754-7864-4889-a302-0342de673f2b"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="351" width="19" height="13" uuid="bcb6f17f-deec-4a97-bc36-e9e678eaa67d"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[mn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="364" width="218" height="13" uuid="9081445c-63ea-480a-a7ef-b1b37a30a88c"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ORA FIDIRANA SY FIRAVANA NY ANDRO NITRANGAN’NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="377" width="134" height="13" uuid="1a80df19-897e-4a88-9b10-f21d8868d8b7"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Horaire de travail le jour de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="368" width="19" height="20" uuid="410a07be-401b-4677-829e-0507bef4eac4"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="368" width="19" height="20" uuid="d6dff43b-24cd-4175-a487-f8b53b2f9e11"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="368" width="19" height="20" uuid="fa499826-c8ff-4097-9ef3-58e95d941ccd"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="368" width="19" height="20" uuid="5083b0ff-385e-48ca-bcd6-e2fd6253ecc0"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="373" width="10" height="13" uuid="7ce4384e-2e43-4da2-b072-d91e8d68c9ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="368" width="19" height="20" uuid="2f1e55f8-7e6a-4095-a3c7-614c11d92748"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="368" width="19" height="20" uuid="15235d7f-b710-46ea-9d89-b93832c03a8b"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="368" width="19" height="20" uuid="db0eb502-8d66-445e-ae90-c376b5679e76"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="368" width="19" height="20" uuid="274a1291-10ba-4ee1-9e6a-9c806650101c"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="368" width="19" height="20" uuid="fbd14d68-f63f-4760-a460-e731b2573a46"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="368" width="19" height="20" uuid="6067a1a0-6d09-402c-9b5c-7661c383d155"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="368" width="19" height="20" uuid="ab5d13d6-1879-450b-81f0-e691c6e6dca7"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="368" width="19" height="20" uuid="fedac54c-df2a-4a34-bb6a-1f2a6f096856"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="368" width="19" height="20" uuid="0be36b10-8d20-4cb7-8a1c-6385101cb7d6"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="368" width="19" height="20" uuid="89154a7f-1947-44d6-b118-6275b2938b98"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="368" width="19" height="20" uuid="6354dacb-54f5-4c7c-bfdf-60b799540600"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="368" width="19" height="20" uuid="31ba3353-8100-4716-ac8c-3df7f05891b8"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="373" width="18" height="13" uuid="91e5bbbf-598b-4e13-b777-59c1bb6bd6f2"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Et de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="373" width="10" height="13" uuid="d6f90020-be2b-4cd8-93f0-d52a4d189374"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="388" width="10" height="13" uuid="7bd784cd-c95d-4a03-9985-06ba80a99f0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[h]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="388" width="10" height="13" uuid="dfb1377f-fd95-47fd-be54-95d336589ffa"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[mn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="388" width="10" height="13" uuid="708b5c01-9795-407a-8572-6fdebb4d78d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[mn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="388" width="10" height="13" uuid="a826476f-5ae1-4ad7-b7da-7b2acbc9b878"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[h]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="388" width="10" height="13" uuid="207c2c2e-128f-4c3f-8f39-4e5326247b3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[mn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="388" width="10" height="13" uuid="68277148-f53f-47cd-8a2d-3ac4d8d53eff"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[h]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="388" width="10" height="13" uuid="b1e18b8d-7789-482e-9e17-c1f7833073e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[mn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="388" width="10" height="13" uuid="ef431c0f-b2f9-4bb3-a12a-746e1bdba37d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[h]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="403" width="108" height="13" uuid="ffda3780-bc9c-4969-b296-bf9d0abec7e9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Localisation exacte de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="390" width="218" height="13" uuid="b0167314-38ed-4550-abce-06daed0f304f"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[TOERANA SY FARITRA NITRANGAN’NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="403" width="447" height="13" uuid="152bffc6-3389-4f1c-8f6b-dec7643368f8"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="429" width="408" height="13" uuid="2a2b21cb-1dd8-4068-a63d-06d4bf98bde8"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="429" width="147" height="13" uuid="e3df8e59-00b1-4d38-80aa-22a9eee19786"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Activité de la victime au moment de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="416" width="248" height="13" uuid="031f5a43-992e-471e-a344-97655b95e954"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ASA NA ZAVATRA NATAO TAMIN’NY FOTOANA NITRANGAN’NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="442" width="248" height="13" uuid="6335af65-445b-445b-a4d2-89add06be393"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[AVY AIZA KA HO AIZA (RAHA TENY AN-DALANA NO NITRANGA NY LOZA)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="455" width="229" height="13" uuid="737bf422-c015-4d6e-9155-eb87769b0f75"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[D’où et vers où se dirigeait la victime (pour les accidents en déplacement)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="455" width="326" height="13" uuid="05f3d682-eee5-4fec-8a6f-3d2890441bc9"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="468" width="108" height="13" uuid="48e81075-0f1f-4857-96c3-6b83a92f51d1"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ANTONY NAHATONGA NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="481" width="118" height="13" uuid="bc899593-2c0d-4f18-afa4-ec9f71be4799"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Élément matériel cause de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="481" width="437" height="13" uuid="4536951d-65ac-4aaf-b82d-241002a6be6b"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="507" width="134" height="13" uuid="d3f6f782-7f96-43c2-8ccc-e86307b3b72c"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Circonstances sommaires de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="507" width="421" height="13" uuid="f92436e4-cca7-46b1-97c7-07fa44e7f785"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="494" width="147" height="13" uuid="c3dc743c-6772-4ad5-bfcc-65cd78b1ce41"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[FILAZANA FOHY NY NITRANGAN’NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="520" width="162" height="13" uuid="ccdbd1aa-2c6c-42c2-8e52-8eda0f6ec33d"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[FAHAVOAZAN’NY VATANA VOKATRY NY LOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="533" width="421" height="13" uuid="2cb114a2-5e75-4b19-baac-f11450bee5e2"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="533" width="134" height="13" uuid="2f8a2ac1-0666-4ddc-85f9-c536f7a49a3e"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Lésions occasionnées par l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="546" width="197" height="13" uuid="7ff17f6c-89b8-438a-8a6b-d623df1f74e9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[TOERAM-PITSABOANA NITONDRANA NY NIHARAN-DOZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="559" width="408" height="13" uuid="0e449d35-6627-4ef9-991e-29b73e808732"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="559" width="147" height="13" uuid="5b112a8a-5f7f-45a3-8b4f-d429952f0071"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Centre de soins où a été évacuée la victime]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="575" width="555" height="1" uuid="99177753-ebe4-4bc1-8919-37042c5353c1"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="576" width="178" height="13" uuid="c0d54199-3f93-4695-b3f6-cf19683e4c37"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ANARANA SY ADIRESIN’IREO VAVOLOMBELONA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="589" width="97" height="13" uuid="fa110f3e-8c26-44ca-8aa0-b1f132cb0993"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Noms et adresses des témoins ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="589" width="446" height="13" uuid="bc0376df-7255-4a8c-95df-022139c466c4"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="602" width="446" height="13" uuid="e35d7c89-99fe-487a-8b1e-adbfcc57e255"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="589" width="22" height="13" uuid="9dc06177-ff1b-4900-80d8-96be4d00542c"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="602" width="22" height="13" uuid="fd22d3ed-36a0-4bd5-a080-2265777fcfc9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[2)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="615" width="296" height="13" uuid="190e4ccc-201a-4678-8d73-be9f6232e0ab"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ANARANA SY ADIRESIN’NY TOMPON’ANDRAIKITRA RAHA LOZA NATAON’OLON-KAFA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="628" width="162" height="13" uuid="0eff8e1a-754f-41fd-8652-9b8588ecde89"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Nom et adresse du tiers responsable de l’accident]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="628" width="393" height="13" uuid="7bfdd9d8-c779-43e6-bacd-3277d89d1dd1"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="641" width="147" height="13" uuid="057107bc-c2a4-4f31-af63-432ba43b34b9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[MANAMPAHEFANA NANAO FAMOTORANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="654" width="446" height="13" uuid="ccfbd0c6-0414-4b75-bf22-431b8538578a"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="654" width="109" height="13" uuid="b78b0a23-4868-454f-9750-b281e9a7b1a7"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Autorité ayant effectué l’enquête]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="668" width="555" height="1" uuid="06917c7d-a7f1-408e-a8ca-b3602d245573"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="669" width="311" height="13" uuid="78efdb38-afd1-43c2-af63-5499b85967f1"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[NAHAZO FAMPIATOANA AMIN’NY ASA AVY AMIN’NY MPITSABO VE NY NIHARAN-DOZA ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="682" width="162" height="13" uuid="f6be8c0c-050b-4845-b25f-9d27dd0f482d"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Est-ce le médecin a prescrit un repos médical ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="670" width="41" height="13" uuid="68a6b8b6-d47a-4da0-95d1-243959ab76ca"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Firy andro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="683" width="60" height="13" uuid="54b5ba40-387c-4faf-bf8b-af4bdf8607c9"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Nombre de jours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="671" width="36" height="25" uuid="20dfe8c4-7bb4-4793-b3da-2d1c73c07419"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="669" width="41" height="13" uuid="4755cd2d-0bed-4c94-9169-cb78761bfe6b"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ENY *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="670" width="18" height="13" uuid="5c87a7fb-afaf-4cf3-8d31-815159e2c189"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(oui)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="681" width="41" height="13" uuid="6e14ad60-b473-438b-907d-d2dc70bcfd56"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[TSIA *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="682" width="18" height="13" uuid="d9d3cf7e-d211-4cd7-98da-5b2ea12f41bd"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(non)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="677" width="47" height="13" uuid="2508c134-3ef5-454c-94bc-e173dc0b8413"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(En chiffres)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="707" width="218" height="13" uuid="09217e3b-bfe5-4219-a098-c88db79bbe2a"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Le salaire sera-t-il maintenu pendant les périodes de repos médical ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="707" width="18" height="13" uuid="7302b87f-c2a4-4046-8a68-de328c8c1460"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(non)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="706" width="41" height="13" uuid="b98e5b84-d08a-4c71-8b6b-4a2520f5836c"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[TSIA *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="694" width="218" height="13" uuid="a6a90420-f215-4dc0-9e43-698bd7ae0938"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[HALOA VE NY KARAMA MANDRITRA NY ANDRO TSY IASANA ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="695" width="18" height="13" uuid="ae1bd5dd-9312-4762-9461-d04119e8ad63"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(oui)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="694" width="41" height="13" uuid="18ca4a88-fbf9-45f5-8dd6-393bb0ba39e4"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ENY *]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="720" width="555" height="1" uuid="746bbde6-b7f4-478f-a9f3-06da86eefb5c"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="721" width="286" height="33" uuid="e37e9e46-2ac6-4e2d-9ac8-8bb298da8cae"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Raha misy fiatoana amin’ny asa dia tsy maintsy ampiarahina amin’ity filazana loza ity, ao anaty valopy mihidy, ny taratasy fandraisan-karama ho an’ny volana mialohan’ny nitrangan’ny loza na kopian’ny fifanarahan’asa raha mbola tsy ampy iray volana no niasana  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="754" width="286" height="34" uuid="793f323b-563d-460e-8616-24aabf34f60e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[En cas d’arrêt de travail, joindre impérativement, sous pli fermé, le bulletin de paye du mois précédent le sinistre ou la copie du contrat de travail en cas d’embauche de moins de un mois.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="721" width="41" height="13" uuid="e2892180-b390-4391-b8d2-642e78aaddcd"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Natao teto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="734" width="41" height="13" uuid="572f8d66-16b3-4645-981d-e875b003d59a"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Fait à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="734" width="77" height="13" uuid="42ad8ad6-0717-4778-9bbd-5074b901c1e3"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="721" width="17" height="13" uuid="19728506-ab7e-4b73-bfd6-1d683debc78f"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ny]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="734" width="17" height="13" uuid="900e179e-8430-4c6b-b0e3-295b7c1b3569"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[le]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="734" width="85" height="13" uuid="dad886ce-4dac-4bf8-bdf8-72b4e1f5a4ac"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="751" width="207" height="24" uuid="dff094a9-24f3-4052-8af9-c6c8aac22a52"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Sonia sy fitomboky ny anaran’ny mpanao fanambarana
+Signature, cachet et nom du déclarant
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="788" width="286" height="13" uuid="6fd132b0-167b-4446-8a41-28783f243566"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[(*) Tsipiho izay tsy ilaina – Rayer la mention inutile.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="98" y="224" width="319" height="20" uuid="08fda065-dfed-4bdb-babe-472d95dd0b93"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomPersonnel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="250" width="100" height="20" uuid="c7853ae4-7b6b-432d-be50-8cd1c578f98f"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="277" width="100" height="20" uuid="bb1703ad-8227-4577-9e8c-da01418ba242"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateEmbauche}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="303" width="132" height="20" uuid="404aae0d-9083-4069-aeca-baf17628a0d9"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fonction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="303" width="173" height="20" uuid="222db3a2-0da4-47e3-b91e-83a14613d21d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="247" width="19" height="20" uuid="ee2662e3-3d07-48bd-ba2b-4d7ca635376a"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(0,1) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="247" width="18" height="20" uuid="6f91f906-4323-4c4b-8b42-ebd76e09366b"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(1,2) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="247" width="19" height="20" uuid="9563fc70-236e-48c3-b1af-ee367c21375d"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(2,3) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="247" width="19" height="20" uuid="8f562cfa-b8de-4f11-916c-b59b7c770667"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(3,4) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="247" width="19" height="20" uuid="4a6105ce-e309-45eb-8f32-e1eed3276dc4"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(4,5) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="247" width="19" height="20" uuid="dabc9d99-5bbd-4672-b38b-b06010b7ad81"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(5,6) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="247" width="19" height="20" uuid="e0fa2220-571c-473a-9401-71a329b62cbf"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(6,7) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="247" width="19" height="20" uuid="0eae745f-6b3d-4219-82d1-94f56e7e3cda"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(7,8) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="247" width="19" height="20" uuid="be293aa5-fd25-4dfe-936f-7a73a027c89f"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(8,9) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="247" width="19" height="20" uuid="63184091-07e5-4c7e-9cdb-7e5e580962ab"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(9,10) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="521" y="247" width="19" height="20" uuid="115a1f22-966b-45ca-b59c-601d1517ee53"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(10,11) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="247" width="18" height="20" uuid="c148a205-3592-4a5d-94a9-c0cfa63e5329"/>
+				<textFieldExpression><![CDATA[$P{cin} != null && $P{cin}.length() > 0 ? $P{cin}.substring(11,12) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="403" width="426" height="20" uuid="28f24849-4cc4-43ea-9b5c-bfadb1caf504"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lieu} == null ? "" : $P{lieu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="429" width="392" height="20" uuid="006f7957-072a-4055-a987-81d546052dce"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{activite} == null ? "" : $P{activite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="481" width="415" height="20" uuid="d6d2d5e8-4f1c-4ab7-b284-435e2428954e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{materiel} == null ? "" : $P{materiel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="533" width="405" height="20" uuid="05764757-f27e-47cb-ab38-e09b5a21bbf4"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lesion} == null ? "" : $P{lesion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="559" width="393" height="20" uuid="2a17ff14-3735-442d-8216-9aa6d7128213"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{centre} == null ? "" : $P{centre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="589" width="432" height="20" uuid="2bafb847-ca50-4389-978e-9600feba89f5"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{temoin1} == null ? "" : $P{temoin1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="602" width="432" height="20" uuid="3a1ad614-adb9-4253-83d6-79bd6eaf3feb"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{temoin2} == null ? "" : $P{temoin2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="521" y="274" width="19" height="20" uuid="c19909e2-bb12-4786-89bf-352ffc4ea047"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(10,11) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="274" width="19" height="20" uuid="68da553d-0750-45ef-9d3e-b5bf74358cae"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(5,6) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="274" width="19" height="20" uuid="47b2f135-5c30-4f24-bf49-fdb922b76d1d"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(7,8) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="274" width="15" height="20" uuid="a88a2029-8a87-4fb4-9646-dc22e43ae26c"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{cin}.substring(0,1) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="274" width="19" height="20" uuid="5fcfa182-d15a-46f1-baed-97ef38875cad"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(9,10) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="274" width="19" height="20" uuid="971432a9-b76a-4e37-8f31-6b4d4377986b"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(2,3) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="274" width="14" height="20" uuid="c10891eb-efd8-4654-9924-1b6e1d376875"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(1,2) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="274" width="18" height="20" uuid="633f8bfa-a59a-48f9-840b-e0aee32d7141"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(11,12) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="274" width="19" height="20" uuid="21367e27-8873-4eab-bd3a-e6f8c9aacd1a"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(8,9) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="274" width="19" height="20" uuid="1db4686b-b534-4828-9b6d-090acb42f4a7"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(6,7) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="274" width="19" height="20" uuid="ce583049-df18-4e53-bfbd-3f57f5904244"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(3,4) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="274" width="19" height="20" uuid="74492061-cd5e-447b-a306-08076a50011e"/>
+				<textFieldExpression><![CDATA[$P{numCnaps} != null && $P{numCnaps}.length() > 0 ? $P{numCnaps}.substring(4,5) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="153" width="318" height="20" uuid="9504818b-b74a-4aa6-bf00-94c1139c0152"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{raisonSociale}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="166" width="107" height="20" uuid="f2af434e-0cab-4e20-937b-f9a01bb94b82"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="166" width="83" height="15" uuid="626117f2-c439-46b2-9e5b-c93079e5c99e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="167" width="287" height="20" uuid="d2f2244f-5c44-41ef-831a-8e1cdefcb546"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseEmployeur}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

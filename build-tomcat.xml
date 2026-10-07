@@ -1,0 +1,158 @@
+<project name="deploy-ejb-arbiochem" default="deploy" basedir="./build-file">
+    <property environment="env"/>
+
+    <property name="tomcat.dir" value="/Users/tokiniainarakotoarisedy/Documents/all_install/apache-tomcat-9.0.118"/>
+    <property name="deploy.dir" value="${tomcat.dir}/webapps/"/>
+
+    <property name="tomcat.manager.url" value="http://localhost:8088/manager/text"/>
+    <property name="tomcat.username"    value="admin"/>
+    <property name="tomcat.password"    value="test"/>
+    <property name="app.path"           value="/arbiochem"/>
+
+
+    <property name="arbiochem-warname" value="arbiochem.war"/>
+    <property name="arbiochem-jarname" value="arbiochem-ejb.jar"/>
+    <property name="arbiochem-earname" value="arbiochem.ear"/>
+    <property name="srcejb-dir" value="./arbiochem-ejb/src/"/>
+    <property name="srcwar-dir" value="./arbiochem-war/src/java"/>
+
+    <property name="build-arbiochem-war_war" value="${basedir}/arbiochem_war" />
+    <property name="build-arbiochem-ejb_jar" value="${basedir}/arbiochem_jar" />
+    <property name="build-arbiochem-lib" value="${basedir}/lib" />
+
+    <property name="buildEar.dir" value="${basedir}/ear"/>
+    <property name="webcontent.dir" value="../arbiochem-war/web"/>
+
+    <property name="srcproperties.dir" value="../arbiochem-ejb/src/java/resources"/>
+    <property name="prompts.dir" value="../arbiochem-ejb/src/ressources/prompts"/>
+
+
+
+    <path id="classpath">
+        <fileset dir="${basedir}\lib">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <taskdef name="tomcat-reload"
+             classname="org.apache.catalina.ant.ReloadTask"
+             classpath="${tomcat.dir}/lib/catalina-ant.jar"/>
+
+
+    <target name="clean" >
+        <echo>
+            ---- Compilation arbiochem ----------------
+        </echo>
+        <echo>JDK ${ant.java.version}  ${ant.version}  </echo>
+        <echo> clean </echo>
+
+        <delete file="${build-arbiochem-ejb_jar}" />
+        <delete file="${build-arbiochem-war_war}" />
+        <delete file="${build-arbiochem-lib}" />
+        <delete file="${basedir}/${arbiochem-earname}" />
+        <delete file="${buildEar.dir}/${arbiochem-earname}" />
+
+        <echo> clean done </echo>
+    </target>
+
+    <tstamp>
+        <format property="dateDuJour" pattern="dd/MM/yyyy hh:mm aa" />
+    </tstamp>
+
+    <target name="init" depends="clean">
+        <echo> initialisation ${dateDuJour} </echo>
+
+        <mkdir dir="${build-arbiochem-war_war}"/>
+        <mkdir dir="${build-arbiochem-war_war}/WEB-INF"/>
+        <mkdir dir="${build-arbiochem-war_war}/WEB-INF/lib"/>
+        <mkdir dir="${build-arbiochem-war_war}/WEB-INF/classes"/>
+        <mkdir dir="${build-arbiochem-war_war}/META-INF"/>
+        <mkdir dir="${build-arbiochem-war_war}/WEB-INF/classes/META-INF"/>
+
+        <mkdir dir="${build-arbiochem-ejb_jar}"/>
+
+
+        <echo file="${webcontent.dir}/dateBuild.txt" append="false" message="${dateDuJour}" />
+
+        <copy todir="${build-arbiochem-war_war}/">
+            <fileset dir="${webcontent.dir}" excludes="META-INF/**"/>
+        </copy>
+        <copy todir="${build-arbiochem-war_war}/META-INF">
+            <fileset dir="${webcontent.dir}/WEB-INF/META-INF" />
+        </copy>
+        <copy todir="${build-arbiochem-war_war}/WEB-INF/lib/">
+            <fileset dir="${basedir}\lib" />
+        </copy>
+        <copy todir="${build-arbiochem-war_war}/WEB-INF/classes/src/resources/prompts">
+            <fileset dir="${prompts.dir}" includes="**/*.txt"/>
+        </copy>
+
+
+        <copy file="../arbiochem-ejb/src/java/project.properties" tofile="${build-arbiochem-ejb_jar}/project.properties" />
+        <copy file="../arbiochem-ejb/src/java/apj.properties" tofile="${build-arbiochem-ejb_jar}/apj.properties" />
+        <copy file="../arbiochem-ejb/src/java/resources/text.properties" tofile="${build-arbiochem-ejb_jar}/java/resources/text.properties" />
+        <copy file="../arbiochem-ejb/src/java/resources/text_zh.properties" tofile="${build-arbiochem-ejb_jar}/java/resources/text_zh.properties" />
+        <echo>  initialisation done </echo>
+        <copy todir="${build-arbiochem-war_war}/WEB-INF">
+            <fileset dir="./../arbiochem-war/web/WEB-INF" includes="**/*.xml" />
+        </copy>
+    </target>
+
+    <target name="compile" depends="init">
+        <echo> compilation </echo>
+        <javac srcdir="../arbiochem-ejb/src/java" destdir="${build-arbiochem-ejb_jar}" nowarn="true" debug="on" deprecation="off" classpathref="classpath" includeantruntime="false" encoding="iso-8859-1">
+        </javac>
+        <echo> compilation done </echo>
+    </target>
+
+    <target name="buildEjbJar" depends="compile">
+        <echo>Build EJB JAR</echo>
+        <jar basedir="${build-arbiochem-ejb_jar}" destfile="${buildEar.dir}/${arbiochem-jarname}" />
+        <copy file="${buildEar.dir}/${arbiochem-jarname}" todir="${build-arbiochem-war_war}/WEB-INF/lib/">
+        </copy>
+        <echo>End Build EJB JAR</echo>
+    </target>
+
+    <target name="compileWar" depends="buildEjbJar">
+        <echo> compilation </echo>
+        <javac srcdir="../arbiochem-war/src/java" destdir="${build-arbiochem-war_war}/WEB-INF/classes/" nowarn="true" debug="on" deprecation="off" classpathref="classpath" includeantruntime="false" encoding="iso-8859-1">
+            <classpath>
+                <pathelement location="${buildEar.dir}/${arbiochem-jarname}" />
+            </classpath>
+        </javac>
+        <echo> compilation done</echo>
+    </target>
+
+
+    <target name="copieProperties" depends="compileWar">
+        <echo> Copie des properties</echo>
+        <copy file="${srcproperties.dir}/text.properties" todir="${build-arbiochem-war_war}/WEB-INF/classes">
+        </copy>
+        <copy file="${srcproperties.dir}/text_zh.properties" todir="${build-arbiochem-war_war}/WEB-INF/classes">
+        </copy>
+        <echo> Fin de la copie </echo>
+    </target>
+
+    <target name="deploy" depends="copieProperties">
+        <echo>${env.JBOSS_HOME}</echo>
+
+        <copy todir="${deploy.dir}/arbiochem">
+            <fileset dir="${build-arbiochem-war_war}" >
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <tomcat-reload url="${tomcat.manager.url}"
+                       username="${tomcat.username}"
+                       password="${tomcat.password}"
+                       path="/arbiochem"
+                       failonerror="false"/>
+
+        <echo> deployement exploded war done </echo>
+        <echo>
+            Compilation arbiochem GENIUS_ART_C [DONE]----------------
+        </echo>
+
+    </target>
+
+</project>

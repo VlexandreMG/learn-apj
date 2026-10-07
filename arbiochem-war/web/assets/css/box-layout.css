@@ -1,0 +1,242 @@
+/* ========================================
+   Styles personnalisés pour box-body et col-md-12
+   ======================================== */
+
+/* Styles pour la classe col-md-12 */
+.col-md-12 {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+/* Form-inline avec flexbox */
+.form-inline {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+/* Label spacing */
+label {
+    margin-right: 5px;
+}
+
+/* Form group avec auto margin */
+.form-group-flex-end {
+    margin-left: auto;
+}
+
+/* Espacement du row */
+.row-mt-20 {
+    margin-top: 20px;
+}
+
+/* Espacements entre blocs */
+.row-spacing {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.row-spacing-top {
+    margin-top: 25px;
+}
+
+.row-spacing-bottom {
+    margin-bottom: 25px;
+}
+
+.section-spacing {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Box body avec hauteur personnalisée */
+.box-body-chart {
+    height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Alert centré */
+.alert-centered {
+    margin-top: 150px;
+    text-align: center;
+}
+
+/* Canvas full height */
+.canvas-fullheight {
+    height: 100%;
+}
+
+/* Réinitialiser le float pour les lignes */
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles pour la classe box-body */
+.box-body {
+    padding: 15px;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fff;
+}
+
+/* Variation du box-body avec hauteur personnalisée */
+.box-body[style*="height"] {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Styles pour box-header */
+.box-header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    background-color: #f9f9f9;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #eee;
+}
+
+/* Titre dans le box-header */
+.box-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+    color: #333;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .col-md-12 {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .box-body {
+        padding: 10px;
+    }
+    
+    .box-header {
+        padding: 10px;
+    }
+    
+    .box-title {
+        font-size: 16px;
+    }
+    
+    .row-spacing,
+    .row-spacing-top,
+    .row-spacing-bottom,
+    .section-spacing {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/* États de focus pour accessibilité */
+.col-md-12:focus-within .box-body {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Impression - masquer les éléments interactifs */
+@media print {
+    .col-md-12 {
+        page-break-inside: avoid;
+    }
+    
+    .box-body {
+        border: 1px solid #ddd;
+    }
+}
+
+/* Réinitialiser le float pour les lignes */
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles pour la classe box-body */
+.box-body {
+    padding: 15px;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fff;
+}
+
+/* Variation du box-body avec hauteur personnalisée */
+.box-body[style*="height"] {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Styles pour box-header */
+.box-header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    background-color: #f9f9f9;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #eee;
+}
+
+/* Titre dans le box-header */
+.box-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+    color: #333;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .col-md-12 {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .box-body {
+        padding: 10px;
+    }
+    
+    .box-header {
+        padding: 10px;
+    }
+    
+    .box-title {
+        font-size: 16px;
+    }
+}
+
+/* États de focus pour accessibilité */
+.col-md-12:focus-within .box-body {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Impression - masquer les éléments interactifs */
+@media print {
+    .col-md-12 {
+        page-break-inside: avoid;
+    }
+    
+    .box-body {
+        border: 1px solid #ddd;
+    }
+}
