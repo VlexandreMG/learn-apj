@@ -36,8 +36,8 @@
         <echo>JDK ${ant.java.version}  ${ant.version}  </echo>
         <echo> clean </echo>
         
-        <delete file="${build-arbiochem-ejb_jar}" />
-        <delete file="${build-arbiochem-war_war}" />
+        <delete dir="${build-arbiochem-ejb_jar}" />
+        <delete dir="${build-arbiochem-war_war}" />
         <delete file="${build-arbiochem-lib}" />
         <delete file="${basedir}/${arbiochem-earname}" />
         <delete file="${buildEar.dir}/${arbiochem-earname}" />
