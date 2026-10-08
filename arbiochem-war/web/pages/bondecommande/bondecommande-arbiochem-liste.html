@@ -1,0 +1,21 @@
+<%@page import="faturefournisseur.As_BonDeCommande"%>
+<%@ page import="faturefournisseur.As_BonDeCommandeCpl" %>
+
+<% try {
+    As_BonDeCommandeCpl bdc_Cpl = new As_BonDeCommandeCpl(); 
+
+    PageRecherche pg = PageRecherche(bdc_Cpl,request,{"id"}, {"daty"},3,{"id"},1)
+
+    pg.setTitre();
+    pg.setUtilisateur();
+    pg.setLien();
+    pg.setApres();
+    
+    // Je ne sais pas comment prendre les entêtes
+    pg.creerObjetPage();
+
+    out.println(getTableau().getHtml());
+}
+
+
+%>
