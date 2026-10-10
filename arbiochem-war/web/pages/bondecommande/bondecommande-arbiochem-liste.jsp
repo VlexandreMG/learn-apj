@@ -21,7 +21,7 @@
     pg.setApres("bondecommande/bondecommande-arbiochem-liste.jsp");
 
     // Je ne sais pas comment prendre les entêtes
-    pg.creerObjetPage(new String[]{"id","daty","designation"}, null);
+    pg.creerObjetPage(libEntete, null);
 
     out.println(pg.getTableau().getHtml());
     // Pour la pagination 
