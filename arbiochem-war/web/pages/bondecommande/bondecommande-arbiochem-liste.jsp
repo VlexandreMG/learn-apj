@@ -3,11 +3,17 @@
 <%@ page import="faturefournisseur.As_BonDeCommandeCpl" %>
 
 <% try {
+
+    // 3. Champs de recherche, champ en intervalle (date), colonnes du tableau
+    String listeCrt[] = {"id","daty","designation","fournisseurlib","modepaiementlib","reference","refproforma"};
+    String listeInt[] = {"daty"};
+    String libEntete[] = {"id","daty","reference","designation","modepaiementlib","fournisseurlib", "idServiceLib","refproforma","etatlib","traite"};
+
     As_BonDeCommandeCpl bdc_Cpl = new As_BonDeCommandeCpl(); 
     bdc_Cpl.setNomTable("As_BonDeCommande_MERETRAITE");
 
                                     // (modèle, request, critères, intervalles, nbRange, colonnes affichées, nbAff).
-    PageRecherche pg = new PageRecherche(bdc_Cpl, request ,new String[]{"id"}, new String[]{"daty"},3,new String[]{"id"},1);
+    PageRecherche pg = new PageRecherche(bdc_Cpl, request ,listeCrt, listeInt,3,libEntete,1);
 
     pg.setTitre("Liste des bons de commande fournisseur");
     pg.setUtilisateur((user.UserEJB)session.getValue("u"));
