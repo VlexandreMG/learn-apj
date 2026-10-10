@@ -21,34 +21,34 @@
     pg.setApres("bondecommande/bondecommande-arbiochem-liste.jsp");
 
      // 7. Libellés des champs du formulaire
-    pr.getFormu().getChamp("reference").setLibelle("R&eacute;f&eacute;rence"); 
-    pr.getFormu().getChamp("designation").setLibelle("D&eacute;signation"); 
-    pr.getFormu().getChamp("fournisseurlib").setLibelle("Fournisseur");
-    pr.getFormu().getChamp("refproforma").setLibelle("R&eacute;f&eacute;rence proforma");
+    pg.getFormu().getChamp("reference").setLibelle("R&eacute;f&eacute;rence"); 
+    pg.getFormu().getChamp("designation").setLibelle("D&eacute;signation"); 
+    pg.getFormu().getChamp("fournisseurlib").setLibelle("Fournisseur");
+    pg.getFormu().getChamp("refpgoforma").setLibelle("R&eacute;f&eacute;rence proforma");
 
     // 8. "Mode de paiement" devient une liste déroulante (table MODEPAIEMENT)
     TypeObjet modePaiement= new TypeObjet();
     modePaiement.setNomTable("MODEPAIEMENT");
     Liste[] liste = new Liste[1];
     liste[0] = new Liste("modepaiementlib", modePaiement, "val", "val");
-    pr.getFormu().changerEnChamp(liste);
-    pr.getFormu().getChamp("modepaiementlib").setLibelle("Mode de paiement");
-    pr.getFormu().getChamp("reference").setLibelle("R&eacute;f&eacute;rence");
+    pg.getFormu().changerEnChamp(liste);
+    pg.getFormu().getChamp("modepaiementlib").setLibelle("Mode de paiement");
+    pg.getFormu().getChamp("reference").setLibelle("R&eacute;f&eacute;rence");
 
-    // 9. Intervalle de dates : daty1 (min) et daty2 (max), pré-remplis avec la date du jour
-    pr.getFormu().getChamp("daty1").setLibelle("Date min");
-    pr.getFormu().getChamp("daty1").setDefaut(utilitaire.Utilitaire.dateDuJour());
-    pr.getFormu().getChamp("daty2").setLibelle("Date max");
-    pr.getFormu().getChamp("daty2").setDefaut(utilitaire.Utilitaire.dateDuJour());
+    // 9. Intervalle de dates : daty1 (min) et daty2 (max), pgé-remplis avec la date du jour
+    pg.getFormu().getChamp("daty1").setLibelle("Date min");
+    pg.getFormu().getChamp("daty1").setDefaut(utilitaire.Utilitaire.dateDuJour());
+    pg.getFormu().getChamp("daty2").setLibelle("Date max");
+    pg.getFormu().getChamp("daty2").setDefaut(utilitaire.Utilitaire.dateDuJour());
 
     //Fixe la pagination 
     pg.setNpp(50);
 
-    // Je ne sais pas comment prendre les entêtes
+    // Je ne sais pas comment pgendre les entêtes
     pg.creerObjetPage(libEntete, null);
 
+    out.println(pg.getFormu().getHtmlEnsemble());
 
-    
     out.println(pg.getTableau().getHtml());
     // Pour la pagination 
     out.println(pg.getBasPage());   
