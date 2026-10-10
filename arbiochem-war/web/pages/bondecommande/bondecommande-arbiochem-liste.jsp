@@ -13,15 +13,15 @@
     bdc_Cpl.setNomTable("As_BonDeCommande_MERETRAITE");
 
                                     // (modèle, request, critères, intervalles, nbRange, colonnes affichées, nbAff).
-    PageRecherche pg = new PageRecherche(bdc_Cpl, request ,listeCrt, listeInt,3,libEntete,1);
+    PageRecherche pg = new PageRecherche(bdc_Cpl, request ,listeCrt, listeInt,3,libEntete,libEntete.length);
 
     pg.setTitre("Liste des bons de commande fournisseur");
     pg.setUtilisateur((user.UserEJB)session.getValue("u"));
     pg.setLien((String)session.getValue("lien"));
     pg.setApres("bondecommande/bondecommande-arbiochem-liste.jsp");
-    
+
     // Je ne sais pas comment prendre les entêtes
-    pg.creerObjetPage(new String[]{"id"}, null);
+    pg.creerObjetPage(new String[]{"id","daty","designation"}, null);
 
     out.println(pg.getTableau().getHtml());
     // Pour la pagination 
